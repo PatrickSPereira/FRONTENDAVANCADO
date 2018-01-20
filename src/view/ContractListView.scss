@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.contact-list {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: 'Roboto', sans-serif;
+    $borderColor: #666;
+    &>h1 {
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 24pt;
+        padding-bottom: 2rem;
+        border-bottom: solid 1px $borderColor;
+    }
+    .contact-left-panel {
+        align-self: stretch;
+        background-color: #0084ff;
+        border: none;
+        border-radius: 4px;
+        display: block;
+        width: 400px;
+        padding: 10px;
+        margin-right: 10px;
+        &>ul {
+            &>li {
+                list-style: none;
+                color: white;
+                .name {
+                    display: block;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                }
+                .phone {
+                    color: darken(white, 20%);
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+    .contact-right-panel {
+        justify-self: stretch;
+        flex-grow: 1;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: stretch;
+            .form-field {
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: column;
+                &>label {
+                    display: block;
+                    font-size: 8pt;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                }
+                &>input {
+                    height: 2rem;
+                    border-radius: 4px;
+                    border: solid 1px darken(#d6d6d6, 10%);
+                    padding-left: 1rem;
+                    font-size: 12pt;
+                }
+                &>select {
+                    height: 2rem;
+                    border-radius: 4px;
+                    border: solid 1px darken(#d6d6d6, 10%);
+                    padding-left: 1rem;
+                    font-size: 12pt;
+                }
+            }
+            .form-field:last-child {
+                margin-bottom: 0;
+            }
+            button {
+                $bgColor: #0084ff;
+                height: 40px;
+                background-color: $bgColor;
+                color: white;
+                border: solid 1px darken($bgColor, 10%);
+                flex-grow: 0;
+                &:hover {
+                    background-color: lighten($bgColor, 10%);
+                }
+                &:active {
+                    background-color: darken($bgColor, 20%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .contact-list {
+        &>h1 {
+            font-size: 18pt;
+            text-align: center;
+        }
+        &>.contact-left-panel {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Contas</title>
+</head>
+
+<body>
+    <section class="contact-list">
+        <h1>Extratos</h1>
+
+        <section class="contact-left-panel">
+            <ul id="reportLaunchList">
+                <li id="reportLaunchItemTemplate">
+
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact-right-panel">
+            <form>
+                <div class="form-field">
+                    <label for="valor">Conta</label>
+                    <select id="account">
+                        <option value="selecione">Selecione</option>
+                    </select>
+                </div> 
+                <div class="form-field">
+                    <label for="data">Data Inicial</label>
+                    <input type="date" id="dateInitialLaunch">
+                </div>
+                <div class="form-field">
+                    <label for="data">Data Final</label>
+                    <input type="date" id="dateFinaleLaunch">
+                </div>                
+                <div class="form-field">
+                    <label for="valor">Valor</label>
+                    <input type="number" id="value">
+                </div>
+                <button type="button" id="addButtonCreateReportLaunch">
+                    Gerar
+                </button>
+            </form>
+        </section>
+    </section>
+
+    <script src="js/sample1.js"></script>
+</body>
+
+</html>
